@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main{
+    width: 100%;
+    background-color: aqua;
+    height: 1100px;
+    padding: 100px;
+    background-image: linear-gradient(to right,#12c2e9, #c471ed, #f64f59);
+
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    color: #000;
+    border-radius: 20px;
+    height: 100%;
+
+}
+.head{
+    padding: 10px 0;
+    user-select: none;
+    
+}
+.control{
+    height: 60px;
+    padding: 10px 0;
+    width: 56%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.form-field{
+    height: 40px;
+    width: 70%;
+    
+    border-radius: 10px;
+    outline: none;
+    
+    position: relative;
+}
+.form-input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(170, 161, 161);
+    border-radius: 10px;
+    outline: none;
+    padding: 0 20px;
+}
+.form-label{
+    position: absolute;
+    top: 20%;
+    left: 11px;
+    
+    pointer-events: none;
+    color: rgb(150, 121, 121);
+    padding: 0 10px;
+    transition: 0.25s ease;
+}
+.form-input:focus{
+    border:  1px solid #12c2e9;
+}
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label{
+    top: -13px;
+    background-color: #fff;
+    color: #12c2e9;
+}
+
+.apply{
+    height: 40px;
+    width: 25%;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    color: #fff;
+    z-index:999;
+    text-align: center;
+    padding: 6px 0;
+}
+.apply > span{
+    z-index: 999;
+    user-select: none;
+}
+.apply::before{
+    background-color: #12c2e9;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    opacity: 0.5;
+    z-index: -1;
+   
+}
+.apply::after{
+    background-color: #12c2e9;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    opacity: 0.5;
+    z-index: -1;
+}
+.apply:hover::before{
+    left: 0;
+}
+.apply:hover::after{
+    right: 0;
+}
+.apply:hover span{
+    color: #fff;
+}
+.apply > p {
+    width: 100%;
+    height: 100%;
+}
+.apply p:hover{
+    cursor: pointer;
+}
+.rot{
+    height: 80px;
+    padding: 10px 0;
+    width: 56%;
+    margin: 0 auto;
+
+}
+.job{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #c471ed;
+    border-radius: 8px;
+    margin-top: 5px;
+    position: relative;
+  
+}
+.job > input {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+.job label {
+    width: 80%;
+    text-align: justify;
+    
+}
+.job > input::before{
+    content: "";
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.job > p:hover{
+cursor: pointer;
+}
+.active {
+    border: 1px solid #12c2e9;
+    border-radius: 8px;
+}
